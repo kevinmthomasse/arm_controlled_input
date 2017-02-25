@@ -1,28 +1,28 @@
 @ ----------------------------------------------------------------------- @
-@ Program:				ARM Controlled Input
-@ Version:				1.0
+@ Program:			ARM Controlled Input
+@ Version:			1.0
 @ Developer:			David West
-@						Based on the code dev by Kevin M. Thomas located at
-@						https://github.com/kevinmthomasse/x86_Controlled_Input 
-@						GitHub repo. 
+@				Based on the code dev by Kevin M. Thomas located at
+@				https://github.com/kevinmthomasse/x86_Controlled_Input 
+@				GitHub repo. 
 @ Creation Date:		09/12/16
 @ Update Date:			02/16/17
 @ Copyright:			CC BY
-@ Platform:				ARM BCM2837
-@ Compile:				as arm_controlled_input.s -o arm_controlled_input.o
-@ Link:					ld arm_controlled_input.o -o arm_controlled_input
+@ Platform:			ARM BCM2837
+@ Compile:			as arm_controlled_input.s -o arm_controlled_input.o
+@ Link:				ld arm_controlled_input.o -o arm_controlled_input
 @ Description:			Program that takes a maximum of 4 bytes of
-@ 						input from the terminal and checks for a
-@ 						successful combination of 4 continous integers
-@ 						otherwise loops to obtain a fresh buffer of
-@ 						input and if 4 continous integers are obtained
-@ 						and there are additional characters inputted
-@ 						they get flushed from the buffer.
+@ 				input from the terminal and checks for a
+@ 				successful combination of 4 continous integers
+@ 				otherwise loops to obtain a fresh buffer of
+@ 				input and if 4 continous integers are obtained
+@ 				and there are additional characters inputted
+@ 				they get flushed from the buffer.
 @ ----------------------------------------------------------------------- @
 
 
 .bss
-	buffer:									@ fill 4 bytes with zeros
+	buffer:				@ fill 4 bytes with zeros
 		.zero 4
 		.align
 
@@ -45,8 +45,8 @@ _start:
 
 	bl write_prompt
 
-.read_buffer:								@ loop when input values are not
-	bl read_buffer							@ between ASCII 0 and 9
+.read_buffer:				@ loop when input values are not
+	bl read_buffer			@ between ASCII 0 and 9
 	ldr r9, =buffer
 	eor r10, r10
 
@@ -111,6 +111,6 @@ flush:
 	mov r7, #3
 	mov r0, #2
 	ldr r1, =buffer
-	mov r2, #(1 << 30)						@ 1,073,741,824 bytes 
+	mov r2, #(1 << 30)		@ 1,073,741,824 bytes 
 	svc #0
 	pop {r1 - r7, pc}
