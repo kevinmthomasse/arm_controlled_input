@@ -10,7 +10,7 @@
 @ Copyright:			CC BY
 @ Platform:			ARM BCM2837
 @ Compile:			as arm_controlled_input.s -o arm_controlled_input.o
-@ Link:				ld arm_controlled_input.o -o arm_controlled_input
+@ Link:			ld arm_controlled_input.o -o arm_controlled_input
 @ Description:			A program that takes a maximum of 4 bytes of
 @ 				input from the terminal and checks for a
 @ 				successful combination of 4 continous integers
