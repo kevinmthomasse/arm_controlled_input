@@ -2,7 +2,7 @@
 @ Program:			ARM Controlled Input
 @ Version:			1.0
 @ Developer:			David West
-@				Based on the code dev by Kevin M. Thomas located at
+@				Based on the code dev by Kevin Thomas located at
 @				https://github.com/kevinmthomasse/x86_Controlled_Input 
 @				GitHub repo. 
 @ Creation Date:		09/12/16
