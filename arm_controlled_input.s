@@ -7,7 +7,8 @@
 @				GitHub repo. 
 @ Creation Date:		09/12/16
 @ Update Date:			02/16/17
-@ Copyright:			CC BY
+@ Copyright:			Copyright: (c) 2020, Kevin Thomas <kevin@mytechnotalent.com>
+@ License:			Apache License, Version 2.0 (see COPYING or https://www.apache.org/licenses/LICENSE-2.0)
 @ Platform:			ARM BCM2837
 @ Compile:			as arm_controlled_input.s -o arm_controlled_input.o
 @ Link:			        ld arm_controlled_input.o -o arm_controlled_input
