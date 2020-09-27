@@ -1,3 +1,5 @@
+![image](https://github.com/mytechnotalent/ARM_Controlled_Input/blob/master/ARM%20Controlled%20Input.png?raw=true)
+
 # ARM Controlled Input
 ARM controlled input example taking a max of 4 bytes from the terminal and checking for a successful combination of int values in a row.
 
